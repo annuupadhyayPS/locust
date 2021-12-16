@@ -171,6 +171,6 @@ jobs:
            arm64v8/ubuntu:latest \
            bash -exc 'apt-get update && apt-get -y install python3 git python3-pip && \
            uname -m && \
-           pip3 install -U wheel setuptools pip && \
-           pip3 install tox codecov && \
+           python3 -m pip install -U wheel setuptools pip && \
+           python3 -m pip install tox codecov && \
            tox -e py38'
